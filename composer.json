@@ -1,5 +1,5 @@
 {
-    "name": "friendsofsymfony/user-bundle",
+    "name": "nacholibre/user-bundle",
     "type": "symfony-bundle",
     "description": "Symfony FOSUserBundle",
     "keywords": ["User management"],
