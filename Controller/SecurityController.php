@@ -14,7 +14,7 @@ namespace FOS\UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\UserBundle\FOSUserEvents;
-use FOS\UserBundle\Event\GetResponseUserEvent;
+use FOS\UserBundle\Event\GetResponseNullableUserEvent;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Security;
@@ -32,7 +32,7 @@ class SecurityController extends Controller
 
         $user = $this->getUser();
 
-        $event = new GetResponseUserEvent($user, $request);
+        $event = new GetResponseNullableUserEvent($user, $request);
         $dispatcher->dispatch(FOSUserEvents::LOGIN_INITIALIZE, $event);
 
         if (null !== $event->getResponse()) {
