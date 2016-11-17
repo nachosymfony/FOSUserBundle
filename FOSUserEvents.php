@@ -318,4 +318,6 @@ final class FOSUserEvents
      * @Event("FOS\UserBundle\Event\UserEvent")
      */
     const USER_DEMOTED = 'fos_user.user.demoted';
+
+    const LOGIN_INITIALIZE = 'fos_user.login.init';
 }
